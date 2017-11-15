@@ -14,25 +14,28 @@ I made this project in order to learn web scraping. I have used requests and bea
   
 # What different files do?
 Basically, i have broken my entire project into different modules. Let's go by them one by one:
-- `main.py`
+- [`main.py`](https://github.com/AksAman/WallE/blob/master/main.py)
   The main python file which calls other functions from different modules. You just need to run this one and chill.
   
-- `urls.py`
+- [`urls.py`](https://github.com/AksAman/WallE/blob/master/urls.py)
   * mainUrl: The main url of the website,as i have used the main url of the website again and again.
   * file_url: The file path where the wallpaper gets stored. By default, images gets stored in 'wallpapers' folder in the project's directory. You can change it by changing variable `dirName`. I have used `os.system`, because it will make WallE adjust file namings depending on the os you are using.
   
-- `Image_downloader.py`
+- [`Image_downloader.py`](https://github.com/AksAman/WallE/blob/master/Image_downloader.py)
   Downloads the wallpaper using the given 'image url' and saves in `dirName`
   
-- `LastPageCalculator.py`
+- [`LastPageCalculator.py`](https://github.com/AksAman/WallE/blob/master/LastPageCalculator.py)
   As i am using random wallpapers, so i am using 
   [`random.randint()`](https://docs.python.org/3/library/random.html#random.randint) python function. As it needs an upper bound, i am using `calcLastpage()` which find the last page for the website.
   
-- `Categories.py`
+- [`Categories.py`](https://github.com/AksAman/WallE/blob/master/Categories.py)
 It scraps the categories of wallpapers and returns the url of the chosen category's page.
 
-- `GetWallpaper.py`
-The heart of the project which uses 'image downloader', 'SetWallpaper'
+- [`SetWallPaper.py`](https://github.com/AksAman/WallE/blob/master/SetWallpaper.py)
+It uses the gnome command `gsettings set org.gnome.desktop.background picture-uri fileurl` to set the wallpaper from the directory specified.
+
+- [`GetWallpaper.py`](https://github.com/AksAman/WallE/blob/master/GetWallpaper.py)
+The heart of the project which uses 'image downloader', 'SetWallpaper' modules to parse the main pages, get the image links, select a random image, download it, save it, and finally set the wallpaper.
   
   
 # Python package dependencies
@@ -40,4 +43,4 @@ The heart of the project which uses 'image downloader', 'SetWallpaper'
 - requests
 - BeautifulSoup4
 
-Run `sudo pip -r requirements.txt` from your terminal to install the dependencies
+Run `sudo pip install -r requirements.txt` from your terminal to install the dependencies
