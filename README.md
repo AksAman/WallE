@@ -19,9 +19,19 @@ Basically, i have broken my entire project into different modules. Let's go by t
   
 - `urls.py`
   * mainUrl: The main url of the website,as i have used the main url of the website again and again.
-  * file_url: The file path where the wallpaper gets stored. By default, images gets stored in 'wallpapers' folder in the project's directory. You can change it by changing variable dirName. I have used `os.system`, because it will make WallE adjust file namings depending on the os you are using.
+  * file_url: The file path where the wallpaper gets stored. By default, images gets stored in 'wallpapers' folder in the project's directory. You can change it by changing variable `dirName`. I have used `os.system`, because it will make WallE adjust file namings depending on the os you are using.
   
 - `Image_downloader.py`
+  Downloads the wallpaper using the given 'image url' and saves in `dirName`
+  
+- `LastPageCalculator.py`
+  As i am using random wallpapers, so i am using `random.randint()` python function [https://docs.python.org/3/library/random.html#random.randint]. As it needs an upper bound, i am using `calcLastpage()` which find the last page for the website.
+  
+- `Categories.py`
+It scraps the categories of wallpapers and returns the url of the chosen category's page.
+
+- `GetWallpaper.py`
+The heart of the project which uses 'image downloader', 'SetWallpaper'
   
   
 # Python package dependencies
