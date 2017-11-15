@@ -6,6 +6,7 @@ I made this project in order to learn web scraping. I have used requests and bea
 
 # Python package dependencies
 
-First run `sudo pip -r requirements.txt` from your terminal
-This will install the dependencies - requests and BeautifulSoup4
+-requests
+-BeautifulSoup4
 
+First run `sudo pip -r requirements.txt` from your terminal
