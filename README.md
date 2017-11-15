@@ -14,7 +14,14 @@ I made this project in order to learn web scraping. I have used requests and bea
   
 # What different files do?
 Basically, i have broken my entire project into different modules. Let's go by them one by one:
-- main.py
+- `main.py`
+  The main python file which calls other functions from different modules. You just need to run this one and chill.
+  
+- `urls.py`
+  * mainUrl: The main url of the website,as i have used the main url of the website again and again.
+  * file_url: The file path where the wallpaper gets stored. By default, images gets stored in 'wallpapers' folder in the project's directory. You can change it by changing variable dirName. I have used `os.system`, because it will make WallE adjust file namings depending on the os you are using.
+  
+- `Image_downloader.py`
   
   
 # Python package dependencies
