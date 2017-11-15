@@ -25,7 +25,8 @@ Basically, i have broken my entire project into different modules. Let's go by t
   Downloads the wallpaper using the given 'image url' and saves in `dirName`
   
 - `LastPageCalculator.py`
-  As i am using random wallpapers, so i am using [`random.randint()`] (https://docs.python.org/3/library/random.html#random.randint) python function. As it needs an upper bound, i am using `calcLastpage()` which find the last page for the website.
+  As i am using random wallpapers, so i am using 
+  [`random.randint()`](https://docs.python.org/3/library/random.html#random.randint) python function. As it needs an upper bound, i am using `calcLastpage()` which find the last page for the website.
   
 - `Categories.py`
 It scraps the categories of wallpapers and returns the url of the chosen category's page.
